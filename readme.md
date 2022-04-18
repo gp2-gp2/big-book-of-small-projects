@@ -2,4 +2,14 @@
 
 ## Setup
 
-Create venv and pip install one package from requirements.txt
+Create venv:
+
+```python3 -m venv venv```
+
+activate
+
+```source venv/bin/activate```
+
+and pip install one package from requirements.txt
+
+```pip install -r requirements.txt```
