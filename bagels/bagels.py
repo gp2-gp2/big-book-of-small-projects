@@ -28,6 +28,12 @@ clues would be Fermi Pico.""".format(
         print("You have {} guesses to get it.".format(MAX_GUESSES))
 
         num_guesses = 1
+        while num_guesses <= MAX_GUESSES:
+            guess = ""
+            # Keep looping until they enter a valid guess:
+            while len(guess) != NUM_DIGITS or not guess.isdecimal():
+                print("Guess #{}: ".format(num_guesses))
+                guess = input(">>> ")
 
 
 def get_secret_num():
