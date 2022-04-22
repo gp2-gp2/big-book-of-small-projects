@@ -13,3 +13,7 @@ activate
 and pip install one package from requirements.txt
 
 ```pip install -r requirements.txt```
+
+### ToDo
+
+* verify how to properly activate venv under Windows in PowerShell
