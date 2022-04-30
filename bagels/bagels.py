@@ -33,8 +33,27 @@ clues would be Fermi Pico."""
                 print(f"Guess #{num_guesses}: ")
                 guess = input(">>> ")
 
+            clues = get_clues(guess, secret_num)
+            print(clues)
+            num_guesses += 1
+
+            if guess == secret_num:
+                break
+            if num_guesses > MAX_GUESSES:
+                print("You ran out of guesses.")
+                print(f"The answer was {secret_num}.")
+
+        print("Do you want to play again? (yes or no)")
+        if not input(">>> ").lower().startswith("y"):
+            break
+    print("Thanks for playing!")
+
 
 def get_secret_num():
+    pass
+
+
+def get_clues():
     pass
 
 
