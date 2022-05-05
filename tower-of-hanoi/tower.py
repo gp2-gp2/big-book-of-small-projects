@@ -12,6 +12,11 @@ def main():
     while True:
         displayTowers(towers)
 
+        fromTower, toTower = getPlayerMove(towers)
+
+        disk = towers[fromTower].pop()
+        towers[toTower].append(disk)
+
 
 def getPlayerMove(towers):
     pass
