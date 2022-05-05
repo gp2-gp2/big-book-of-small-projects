@@ -7,4 +7,23 @@ SOLVED_TOWER = list(range(TOTAL_DISKS, 0, -1))
 
 
 def main():
+    towers = {"A": copy.copy(SOLVED_TOWER), "B": [], "C": []}
+
+    while True:
+        displayTowers(towers)
+
+
+def getPlayerMove(towers):
     pass
+
+
+def displayTowers(towers):
+    pass
+
+
+def displayDisk(width):
+    pass
+
+
+if __name__ == "__main__":
+    main()
