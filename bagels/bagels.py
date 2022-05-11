@@ -1,7 +1,14 @@
+"""Bagels, by Al Sweigart al@inventwithpython.com
+A deductive logic game where you must guess a number based on clues.
+This code is available at https://nostarch.com/big-book-small-python-programming
+A version of this game is featured in the book, "Invent Your Own
+Computer Games with Python" https://nostarch.com/inventwithpython
+Tags: short, game, puzzle"""
+
 import random
 
-NUM_DIGITS = 3
-MAX_GUESSES = 10
+NUM_DIGITS = 3  # (!) Try setting this to 1 or 10.
+MAX_GUESSES = 10  # (!) Try setting this to 1 or 100.
 
 
 def main():
@@ -20,10 +27,11 @@ For example, if the secret number was 248 and your guess was 843, the
 clues would be Fermi Pico."""
     )
 
-    while True:
+    while True:  # Main game loop.
+        # This stores the secret number the player needs to guess:
         secret_num = get_secret_num()
         print("I have thought up a number.")
-        print("You have {} guesses to get it.".format(MAX_GUESSES))
+        print(f" You have {MAX_GUESSES} guesses to get it.")
 
         num_guesses = 1
         while num_guesses <= MAX_GUESSES:
@@ -38,7 +46,7 @@ clues would be Fermi Pico."""
             num_guesses += 1
 
             if guess == secret_num:
-                break
+                break  # They are correct so, break out of this loop.
             if num_guesses > MAX_GUESSES:
                 print("You ran out of guesses.")
                 print(f"The answer was {secret_num}.")
